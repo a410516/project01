@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植爽 Plant-Openness</title>
+
+    <link href="./img/img-01/Logo-t.png" rel="icon" type="png">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/a01.css">
+    <link rel="stylesheet" href="./jquery/jquery.js">
+
+    <style>
+        .img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+
+<!--以下開始內容 -->
+
+<body>
+    <header>
+        <div style="text-align: center;">
+            <a href="a01.html"><img id="w-icon" src="./img/img-01/Logo-b.png"></a>
+        </div>
+    </header>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="font-size: 26px;">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <a href="contact.html"><img src="./img/img-01/Logo-t.png" width="30" height="30"></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="a01.html">-關於植爽-</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sale.html">-銷售商品-</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="buy.html">-購物須知-</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="contact.html">-聯絡我們-</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div style="text-align: center;" class="container">
+        <h2 style="padding: 20px; text-align: left;"><b>--聯絡方式--</b></h2>
+        <a href="tel:+886-900123456"><img src="./img/img-con/c-1.png" style="margin:50px;" class="img"></a>
+
+        <a href="mailto:plantopenness@gmail.com"><img src="./img/img-con/c-2.png" style="margin:50px;" class="img"></a>
+
+
+        <br><br>
+
+        <p style="text-align: center;font-size: 28px;"><b>如您對產品有疑問，或外島訂購需求，歡迎透過以下方式與我們聯繫， 我們會盡快回復您的需求，謝謝。</b></p>
+        <br><br>
+
+        <form class="row g-3" style="text-align: center; background-color:rgba(255, 255, 255, 0.797);padding: 30px;border-radius: 30px;" id="myForm">
+            <div class="col-md-4">
+                <label for="inputName4" class="form-label" style="font-size: 28px;">姓名</label>
+                <input type="search" class="form-control" id="inputName4" style="height: 50px;font-size: 24px;"
+                    placeholder="請輸入中文姓名" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputPhone4" class="form-label" style="font-size: 28px;">電話</label>
+                <input type="tel" class="form-control" id="inputPhone4" style="height: 50px;font-size: 24px;"
+                    placeholder="市話/行動電話" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label" style="font-size: 28px;">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" style="height: 50px;font-size: 24px;"
+                    placeholder="請輸入信箱" required>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label" style="font-size: 28px;">地址</label>
+                <input type="search" class="form-control" id="inputAddress" placeholder="請輸入您的郵遞區號與地址"
+                    style="height: 50px;font-size: 24px;" required>
+            </div>
+            <div class="col-md-3">
+                <label for="inputState" class="form-label" style="font-size: 28px;">諮詢項目</label>
+                <select id="inputState" class="form-select" style="height: 50px;font-size: 24px;" required>
+                    <option selected>產品諮詢</option>
+                    <option>合作洽談</option>
+                    <option>意見回饋</option>
+                    <option>其他</option>
+                </select>
+            </div>
+            <div class="col-md-9">
+                <label for="inputZip" class="form-label" style="font-size: 28px;">內容說明</label>
+                <textarea type="text" class="form-control" id="inputZip" style="font-size: 24px;" required></textarea>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check" style="font-size: 24px;text-align: left;">
+                    <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="gridCheck"  required>
+                        <b>確認上述資料無誤，並同意傳送個人資料僅供參考，防止個資外洩問題。</b>
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button onclick="showMsg()" type="submit" class="btn btn-primary"
+                    style="width: 300px;font-size: 20px;">確認送出</button>
+            </div>
+
+            <script>
+                function showMsg() {
+                    event.preventDefault();
+                    var inputName4 = document.getElementById("inputName4").value;
+                    var inputPhone4 = document.getElementById("inputPhone4").value;
+                    var inputEmail4 = document.getElementById("inputEmail4").value;
+                    var inputAddress = document.getElementById("inputAddress").value;
+                    var inputState = document.getElementById("inputState").value;
+                    var inputZip = document.getElementById("inputZip").value;
+                    var gridCheck = document.getElementById("gridCheck");
+
+                    if (inputName4 === '' || inputPhone4 === '' || inputEmail4 === ''
+                        || inputAddress === '' || inputState === '' || inputZip === '' || !gridCheck.checked) {
+                        alert('有資料未填寫或未勾選同意條款');
+
+                    }
+                    else {
+                        alert("已收到您所填寫之表單，謝謝您！");
+                        document.getElementById("inputName4").value = "";
+                        document.getElementById("inputPhone4").value = "";
+                        document.getElementById("inputEmail4").value = "";
+                        document.getElementById("inputAddress").value = "";
+                        document.getElementById("inputState").selectedIndex = 0;
+                        document.getElementById("inputZip").value = "";
+                        gridCheck.checked = false;
+
+                    };
+
+                }
+
+            </script>
+        </form>
+        <br><br>
+    </div>
+
+    <footer style="display: flex;">
+        <div style="text-align: left;">
+            <a href="contact.html"><img style="width: 200px;" src="./img/img-01/Logo-b.png"></a>
+        </div>
+
+        <div id="footer-t">
+            <p><b>聯絡資訊</b></p>
+            <a href="tel:+886-900123456">電話:0900-123-456</a>
+            <address><a href="mailto:plantopenness@gmail.com">信箱:plantopenness@gmail.com</a></address>
+        </div>
+
+    </footer>
+
+
+</body>

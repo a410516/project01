@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<body onload="run()">
+  <div class="ttt" style="background-color: lightblue;">
+
+  </div>
+  <div class="item"></div>
+
+  <script>
+    let shopItem=[]
+
+    function clickMe(clickItem,index){
+      alert(`這是第${index},顯示出${clickItem}`);
+
+      shopItem.push(clickItem)
+      let items=document.querySelector(".item");
+      let printShop=""
+      shopItem.map((shop,index)=>{
+        printShop+=`<div>${shop}</div>`
+      })
+      items.innerHTML=printShop
+
+    }
+    
+    function run(){
+      let placeData = document.querySelector(".ttt");
+      let print = "";
+      let boxs = ['商品a','商品b']
+      boxs.map(function(item,index){
+        print += `<div>${item}</div> <button onClick="clickMe('${item}','${index}')">加入購物車</button>`
+      })
+      placeData.innerHTML=print
+    }
+    
+    
+  </script>
+  
+</body>
+</html>

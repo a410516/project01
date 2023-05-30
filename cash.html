@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植爽 Plant-Openness</title>
+
+    <link href="./img/img-01/Logo-t.png" rel="icon" type="png">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/a01.css">
+    <link rel="stylesheet" href="./jquery/jquery.js">
+
+</head>
+
+
+<!--以下開始內容 -->
+
+<body>
+    <header>
+        <div style="text-align: center;">
+            <a href="a01.html"><img id="w-icon" src="./img/img-01/Logo-b.png"></a>
+        </div>
+    </header>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="font-size: 26px;">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <a href="cash.html"><img src="./img/img-01/Logo-t.png" width="30" height="30"></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sale.html">-回商品首頁-</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div style="text-align: center;" class="container">
+        <h2 style="padding: 20px; text-align: left;font-size: 50px;"><b>--資料填寫--</b></h2>
+
+        <br><br>
+
+        <form class="row g-3"
+            style="text-align: center; background-color:rgba(255, 255, 255, 0.797);padding: 30px;border-radius: 30px;"
+            id="myForm">
+            <div class="col-md-4">
+                <label for="inputName4" class="form-label" style="font-size: 28px;">姓名</label>
+                <input type="text" class="form-control" id="inputName4" style="height: 50px;font-size: 24px;"
+                    placeholder="請輸入中文姓名" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputPhone4" class="form-label" style="font-size: 28px;">電話</label>
+                <input type="tel" class="form-control" id="inputPhone4" style="height: 50px;font-size: 24px;"
+                    placeholder="市話/行動電話" required>
+            </div>
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label" style="font-size: 28px;">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" style="height: 50px;font-size: 24px;"
+                    placeholder="請輸入信箱" required>
+            </div>
+
+            <div class="col-md-3">
+                <label for="inputState" class="form-label" style="font-size: 28px;">縣市</label>
+                <select id="inputState" class="form-select" style="height: 50px;font-size: 24px;" required>
+                    <option selected>臺北市</option>
+                    <option>新北市</option>
+                    <option>桃園市</option>
+                    <option>臺中市</option>
+                    <option>臺南市</option>
+                    <option>高雄市</option>
+                    <option>宜蘭縣</option>
+                    <option>新竹縣</option>
+                    <option>苗栗縣</option>
+                    <option>彰化縣</option>
+                    <option>南投縣</option>
+                    <option>雲林縣</option>
+                    <option>嘉義縣</option>
+                    <option>屏東縣</option>
+                    <option>花蓮縣</option>
+                    <option>臺東縣</option>
+                    <option>澎湖縣</option>
+                    <option>基隆市</option>
+                    <option>新竹市</option>
+                    <option>嘉義市</option>
+                </select>
+            </div>
+            <div class="col-md-9">
+                <label for="inputZip" class="form-label" style="font-size: 28px;">欲送達地址</label>
+                <input type="text" class="form-control" id="inputZip" style="font-size: 24px;" required></input>
+            </div>
+
+            <div class="col-md-4">
+                <label for="freight" class="form-label" style="font-size: 28px;">配送方式及運費</label>
+                <select id="freight" class="form-select" style="height: 50px;font-size: 24px;" required>
+                    <option selected>宅配運費 $150</option>
+                    <option>宅配運費 + 特殊包材 $250</option>
+                    <option>宅配滿$999免運</option>
+                    <option>買家自取(專員會與您連絡)</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="dateinput" class="form-label" style="font-size: 28px;">希望送達日期</label>
+                <input type="date" class="form-control" id="dateinput" style="height: 50px;font-size: 24px;" required>
+            </div>
+            <div class="col-md-4">
+                <label for="time" class="form-label" style="font-size: 28px;">希望送達時間</label>
+                <input type="time" class="form-control" value="08:00" id="time"style="height: 50px;font-size: 24px;" required>
+            </div>
+
+            <p style="text-align: center;font-size: 22px;color: red;"><b>*請填寫正確資訊以確保商品順利送達*</b></p>
+
+
+
+            <div class="col-12">
+                <button onclick="showMsg()" type="submit" class="btn btn-primary"
+                    style="width: 300px;font-size: 20px;">確認送出</button>
+            </div>
+
+            <script>
+                function showMsg() {
+                    event.preventDefault();
+                    var inputName4 = document.getElementById("inputName4").value;
+                    var inputPhone4 = document.getElementById("inputPhone4").value;
+                    var inputEmail4 = document.getElementById("inputEmail4").value;
+                    var inputState = document.getElementById("inputState").value;
+                    var inputZip = document.getElementById("inputZip").value;
+                    var freight = document.getElementById("freight").value;
+                    var dateinput = document.getElementById("dateinput").value;
+                    var time = document.getElementById("time").value;
+
+                    if (inputName4 === '' || inputPhone4 === '' || inputEmail4 === ''
+                        || inputState === '' || inputZip === '' || freight === '' || dateinput === ''|| time === '') {
+                        alert('有資料未填寫，請再選擇一次');
+
+                    }
+                    else {
+                        alert("已收到您的資料，謝謝您！");
+                        document.getElementById("inputName4").value = "";
+                        document.getElementById("inputPhone4").value = "";
+                        document.getElementById("inputEmail4").value = "";
+                        document.getElementById("inputState").selectedIndex = 0;
+                        document.getElementById("inputZip").value = "";
+                        document.getElementById("freight").value = "";
+                        document.getElementById("dateinput").value = "";
+                        document.getElementById("time").value = "";
+
+                    };
+
+                }
+
+            </script>
+        </form>
+        <br><br>
+    </div>
+
+    <footer style="display: flex;">
+        <div style="text-align: left;">
+            <a href="contact.html"><img style="width: 200px;" src="./img/img-01/Logo-b.png"></a>
+        </div>
+
+        <div id="footer-t">
+            <p><b>聯絡資訊</b></p>
+            <a href="tel:+886-900123456">電話:0900-123-456</a>
+            <address><a href="mailto:plantopenness@gmail.com">信箱:plantopenness@gmail.com</a></address>
+        </div>
+
+    </footer>
+
+
+</body>
